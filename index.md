@@ -18,3 +18,4 @@ layout: layout.html
 1. [Read/write](04-read-write)
 1. [Collections](05-collections)
 1. [Templates](06-templates)
+1. [Logins](07-logins)

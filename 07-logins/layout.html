@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>login test</title>
+    <script src="js.cookie.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      var altcloudCookie = Cookies.get('_acu')
+      var username = altcloudCookie && JSON.parse(altcloudCookie).username
+    </script>
+    <style media="screen">
+      body {
+        margin: 0;
+      }
+      main {
+        padding: 10px;
+      }
+      nav {
+        text-align: right;
+        background: #ddd;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <nav>
+      <span class="username"></span>
+      <a id="logout" href="#">log out</a>
+      <a id="login" href="login">log in</a>
+    </nav>
+
+    <main>
+      {{content}}
+    </main>
+
+    <script>
+      document.getElementById('logout').href = "/logout?redirect=" + encodeURIComponent(window.location.href)
+      // quick and dirty "templating"
+      if (username) {
+        var els = document.querySelectorAll('.username')
+        for (var i=0; i<els.length; i++) els[i].innerText = username
+        document.getElementById('login').style.display = 'none'
+      } else {
+        document.getElementById('logout').style.display = 'none'
+      }
+    </script>
+  </body>
+</html>

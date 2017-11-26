@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Log in</title>
+  </head>
+  <body>
+    <p>
+      Log in with username test, password test.
+    </p>
+
+    <form method="POST" action="/login">
+      <label for="username">Username</label>
+      <input type="text" name="username"></input>
+      <br/>
+      <label for="password">Password</label>
+      <input type="password" name="password"></input>
+      <br/><br/>
+      <input type="hidden" name="redirect"></input>
+      <button type="submit">Log in</button>
+    </form>
+
+    <script type="text/javascript">
+      // direct to the index page one level up
+      document.querySelector('[name=redirect]').value = window.location.href.replace(/\w+$/, '')
+    </script>
+
+  </body>
+</html>
