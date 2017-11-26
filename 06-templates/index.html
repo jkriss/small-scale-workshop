@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>food fotos</title>
+    <style media="screen">
+      body {
+        background: #fafafa;
+      }
+      a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="photos"></div>
+
+    <script src="hogan.min.js" charset="utf-8"></script>
+
+    <script type="text/template" id="photos-template">
+      {{#photos}}
+      <a href="https://unsplash.com/photos/{{id}}" target="_blank">
+        <img src="https://source.unsplash.com/{{id}}/300x200"/>
+      </a>
+      {{/photos}}
+    </script>
+
+    <script>
+      var template = Hogan.compile(document.getElementById('photos-template').innerText)
+
+      fetch('photos.json')
+        .then(function(response) {
+          return response.json()
+        }).then(function(json) {
+          // data is keyed by the file name
+          console.log(json)
+          // we just want the values as an array
+          var photos = Object.values(json)
+          document.getElementById('photos').innerHTML = template.render({ photos: photos })
+        })
+    </script>
+  </body>
+</html>

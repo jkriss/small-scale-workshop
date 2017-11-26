@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>food fotos</title>
+  </head>
+  <body>
+    <pre id="result"></pre>
+    <script>
+      fetch('photos.json')
+        .then(function(response) {
+          return response.json()
+        }).then(function(json) {
+          document.getElementById('result').innerText = JSON.stringify(json, null, 2)
+        })
+    </script>
+  </body>
+</html>
