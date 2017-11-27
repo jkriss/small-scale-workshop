@@ -4,6 +4,10 @@ layout: layout.html
 
 # Small scale tech / altcloud
 
+## Instructions
+
+- [README](README.md)
+
 ## Downloads
 
 - [Mac](macos/altcloud)
@@ -19,3 +23,4 @@ layout: layout.html
 1. [Collections](05-collections)
 1. [Templates](06-templates)
 1. [Logins](07-logins)
+1. [Full app](08-full-app)
