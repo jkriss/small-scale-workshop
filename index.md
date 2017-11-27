@@ -12,6 +12,7 @@ layout: layout.html
 
 - [Mac](macos/altcloud)
 - [Linux](linux-x64/altcloud)
+- [Linux (ARMv6)](linux-armv6/altcloud)
 - [Windows](win/altcloud.exe)
 
 ## Workshop exercises
