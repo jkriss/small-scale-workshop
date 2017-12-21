@@ -23,4 +23,7 @@ layout: layout.html
 1. [Collections](05-collections)
 1. [Templates](06-templates)
 1. [Logins](07-logins)
-1. [Full app](08-full-app)
+
+## Raspberry Pi
+
+1. [Setup](pi/setup.md)
