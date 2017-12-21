@@ -8,14 +8,6 @@ layout: layout.html
 
 - [README](README.md)
 
-## Downloads
-
-- [Mac](macos/altcloud)
-- [Linux](linux-x64/altcloud)
-- [Linux (ARMv6)](linux-armv6/altcloud)
-- [Linux (ARMv7)](linux-armv7/altcloud)
-- [Windows](win/altcloud.exe)
-
 ## Workshop exercises
 
 1. [Hello](01-hello)
