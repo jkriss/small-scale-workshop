@@ -2,7 +2,7 @@
 layout: layout.html
 ---
 
-# Small scale tech / altcloud
+# small scale tech / altcloud
 
 ## Instructions
 
