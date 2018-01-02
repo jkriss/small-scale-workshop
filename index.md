@@ -9,7 +9,7 @@ layout: layout.html
 - [Mac](macos/altcloud)
 - [Linux](linux-x64/altcloud)
 - [Windows](win/altcloud.exe)
-- [Raspberry Pi](linux-armv7/altcloud)
+- [Raspberry Pi](linux-armv6/altcloud)
 
 ## Instructions
 

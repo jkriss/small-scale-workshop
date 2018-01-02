@@ -2,6 +2,7 @@
 .dat
 .config
 .dat-link
+linux-armv6
 linux-armv7
 linux-x64
 win
