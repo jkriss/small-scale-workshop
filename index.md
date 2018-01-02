@@ -4,6 +4,13 @@ layout: layout.html
 
 # small scale tech / altcloud
 
+## Binaries
+
+- [Mac](macos/altcloud)
+- [Linux](linux-x64/altcloud)
+- [Windows](win/altcloud.exe)
+- [Raspberry Pi](linux-armv7/altcloud)
+
 ## Instructions
 
 - [README](README.md)
