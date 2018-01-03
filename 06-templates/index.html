@@ -20,8 +20,10 @@
     <script type="text/template" id="photos-template">
       {{#photos}}
       <a href="https://unsplash.com/photos/{{id}}" target="_blank">
-        <img src="https://source.unsplash.com/{{id}}/300x200"/>
+        <!-- <img src="https://source.unsplash.com/{{id}}/300x200"/> -->
+        <img src="images/{{id}}.jpeg">
       </a>
+      <!-- <code>wget https://source.unsplash.com/{{id}}/300x200 -O 06-templates/images/{{id}}.jpeg</code><br/> -->
       {{/photos}}
     </script>
 
