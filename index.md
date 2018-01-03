@@ -7,6 +7,7 @@ layout: layout.html
 1. [Download these examples](https://github.com/jkriss/small-scale-workshop/archive/master.zip).
 1. Download altcloud for your platform:
 [Mac](macos/altcloud), [Linux](linux-x64/altcloud), [Windows](win/altcloud.exe), [Raspberry Pi](linux-armv6/altcloud)
+1. Move the executable to the examples directory, or add it to your path.
 
 Note: if you're using the Windows Subsystem for Linux, download the Linux version, not the Windows exe.
 
