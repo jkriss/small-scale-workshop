@@ -4,16 +4,13 @@ layout: layout.html
 
 # small scale tech / altcloud
 
-## Binaries
+1. [Download these examples](https://github.com/jkriss/small-scale-workshop/archive/master.zip).
+1. Download altcloud for your platform:
+[Mac](macos/altcloud), [Linux](linux-x64/altcloud), [Windows](win/altcloud.exe), [Raspberry Pi](linux-armv6/altcloud)
 
-- [Mac](macos/altcloud)
-- [Linux](linux-x64/altcloud)
-- [Windows](win/altcloud.exe)
-- [Raspberry Pi](linux-armv6/altcloud)
+Note: if you're using the Windows Subsystem for Linux, download the Linux version, not the Windows exe.
 
-## Instructions
-
-- [README](README.md)
+You'll also want a <a href="https://hyper.is" target="_blank">terminal program</a> and a <a href="http://atom.io" target="_blank">text editor</a>. <!-- __ <-- fix the annoying syntax highlighting -->
 
 ## Workshop exercises
 
