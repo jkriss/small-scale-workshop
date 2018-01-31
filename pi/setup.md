@@ -21,7 +21,7 @@ Note: On Windows, you'll probably need [Bonjour](/Bonjour64.msi) for the .local 
 ### Get on wifi
 
 1. Run `sudo pico /etc/wpa_supplicant/wpa_supplicant.conf`
-1. Add this block for Art Center wifi:
+1. Add this block for Art Center wifi (or follow [the instructions](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md) to set up another network):
 
         network={
             ssid="ACCDPUBNET"

@@ -22,7 +22,8 @@ You'll also want a <a href="https://hyper.is" target="_blank">terminal program</
 1. [Collections](05-collections)
 1. [Templates](06-templates)
 1. [Logins](07-logins)
+1. [Full application](08-minigram)
 
 ## Raspberry Pi
 
-1. [Setup](pi/setup.md)
+1. [Setup](pi/setup)
