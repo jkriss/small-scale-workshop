@@ -25,6 +25,7 @@ Note: On Windows, you'll probably need [Bonjour](/Bonjour64.msi) for the .local 
 
         network={
             ssid="ACCDPUBNET"
+            key_mgmt=NONE
             id_str="artcenter"
             priority=2
         }
