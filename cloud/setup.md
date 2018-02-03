@@ -8,8 +8,8 @@ layout: ../layout.html
 1. Create a new server using the most recent version of Ubuntu
 1. Connect to your instance following the instructions for your provider
 1. As root, run `bash <(curl -s https://workshop.altcloud.io/setup.sh)`
-1. Open up https://your.ip.address (you'll get a certificate warning until you assign a domain name)
-1. Add files to `/home/altcloud/webroot/` as you desire
+
+When the script finishes, you'll see the IP addresses for your server, as well as the generated password for the altcloud user. The server root will be `/home/altcloud/webroot`.
 
 ## Bonus points
 

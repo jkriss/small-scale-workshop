@@ -24,10 +24,10 @@ Note: On Windows, you'll probably need [Bonjour](/Bonjour64.msi) for the .local 
 1. Add this block for Art Center wifi (or follow [the instructions](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md) to set up another network):
 
         network={
-            ssid="ACCDPUBNET"
-            key_mgmt=NONE
-            id_str="artcenter"
-            priority=2
+            ssid="wifi-network-name"
+            psk="wifi-password"
+            id_str="wifi-name"
+            priority=1
         }
 
 1. Save changes and run `sudo wpa_cli -i wlan0 reconfigure`

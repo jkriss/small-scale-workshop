@@ -27,3 +27,8 @@ You'll also want a <a href="https://hyper.is" target="_blank">terminal program</
 ## Raspberry Pi
 
 1. [Setup](pi/setup)
+
+
+## Cloud
+
+1. [Setup](cloud/setup)
