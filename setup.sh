@@ -29,7 +29,9 @@ fi
 
 # set up altcloud user
 echo -e "\n-- setting up altcloud user\n"
-sudo adduser --disabled-password --gecos ""  altcloud ; true
+altcloudPassword=`openssl rand -base64 12`
+sudo adduser --gecos ""  altcloud ; true
+echo -e "$altcloudPassword\n$altcloudPassword\n" | sudo passwd altcloud
 sudo setcap cap_net_bind_service=+ep `readlink -f \`which altcloud\``
 
 echo -e "\n-- setting up altcloud service\n"
@@ -37,7 +39,7 @@ echo -e "\n-- setting up altcloud service\n"
 sudo tee /etc/systemd/system/altcloud.service <<- EOM
 [Service]
 ExecStart=/usr/local/bin/altcloud server
-WorkingDirectory=/home/altcloud/webroot
+WorkingDirectory=/home/altcloud/
 Restart=always
 StandardOutput=syslog
 StandardError=syslog
@@ -51,9 +53,8 @@ WantedBy=multi-user.target
 EOM
 
 # switch to that user, make stuff
-echo -e "\n-- creating webroot, keys, config, index page (as altcloud)\n"
-sudo -u altcloud mkdir -p /home/altcloud/webroot
-cd /home/altcloud/webroot
+echo -e "\n-- creating keys, config, index page (as altcloud)\n"
+cd /home/altcloud
 sudo -u altcloud altcloud keys
 echo "Hello world!" | sudo -u altcloud tee index.html
 sudo -u altcloud tee .config <<- EOM
@@ -65,6 +66,16 @@ EOM
 cd ~
 echo -e "\n-- starting altcloud service\n"
 sudo systemctl enable altcloud
-sudo systemctl start altcloud
+sudo systemctl daemon-reload
+sudo systemctl restart altcloud
 
-echo -e "done!"
+echo -e "done!\n"
+
+ips=`hostname -I`
+echo "Listening at:"
+for ip in $ips
+do
+    echo "https://$ip"
+done
+
+echo -e "\nConnect with ssh (or scp or sftp) using:\n\nusername: altcloud\npassword: $altcloudPassword\n"
